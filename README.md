@@ -32,8 +32,8 @@ Simple_Browser - это легкий и настраиваемый веб-бра
 
 ## Зависимости
 
-PyQt5 (установка через pip install PyQt5)
-PyQtWebEngine (установка через pip install PyQtWebEngine)
+- PyQt5 (установка через pip install PyQt5)
+- PyQtWebEngine (установка через pip install PyQtWebEngine)
 
 ## Screenshots
 
