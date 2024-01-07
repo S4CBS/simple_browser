@@ -1,4 +1,4 @@
-English:
+## English:
 # About Browser
 
 Simple_Browser is a lightweight and customizable web browser developed using PyQt5 and PyQtWebEngine. It offers a straightforward user interface with essential features for seamless web browsing.
