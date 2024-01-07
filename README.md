@@ -17,4 +17,8 @@ Simple_Browser is a lightweight and customizable web browser developed using PyQ
 
 ## Screenshots
 
-![Alt text](/screenshots/image1.PNG?)
+![image1](/screenshots/image1.PNG?raw=true "Image1")
+![image2](/screenshots/image2.PNG?raw=true "Image2")
+![image3](/screenshots/image3.PNG?raw=true "Image3")
+
+
