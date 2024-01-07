@@ -40,5 +40,6 @@ PyQtWebEngine (установка через pip install PyQtWebEngine)
 ![image1](/screenshots/image1.PNG?raw=true "Home page")
 ![image2](/screenshots/image2.PNG?raw=true "History")
 ![image3](/screenshots/image3.PNG?raw=true "Many tabs")
+![image4](/screenshots/image4.PNG?raw=true "Download files")
 
 
