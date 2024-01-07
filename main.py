@@ -150,16 +150,7 @@ class Browser(QMainWindow):
         info_btn.triggered.connect(self.info)
         qtoolbar.addAction(info_btn)
 
-        self.url_line.setStyleSheet("""
-            border: 1px;
-            border-radius: 10px;
-            padding: 3;
-            background: #fff;
-            selection-background-color: darkgray;
-            left:5px;
-            right: 5px;
-            font: 12px/14px sans serif;
-        """)
+        self.url_line.setStyleSheet(open(os.path.join("styles", "url_line.css")).read())
 
         history_btn = QAction(QIcon(os.path.join("_internal","images", "history.png")), "История", self)
         history_btn.triggered.connect(self.show_history)
