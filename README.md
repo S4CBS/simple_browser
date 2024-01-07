@@ -14,5 +14,5 @@ Custom Browser is a lightweight and customizable web browser developed using PyQ
 
 ## Dependencies
 
-- PyQt5
-- PyQtWebEngine
+- PyQt5 (pip install PyQt5)
+- PyQtWebEngine (pip install PyQtWebEngine)
