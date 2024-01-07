@@ -1,0 +1,15 @@
+/* url_line.css */
+
+#url_line {
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 3px;
+    background: #fff;
+    margin-left: 5px;
+    margin-right: 5px;
+    font: 12px/14px sans-serif;
+}
+
+#url_line:selected {
+    background-color: darkgray;
+}
