@@ -156,6 +156,9 @@ class Browser(QMainWindow):
         history_btn.triggered.connect(self.show_history)
         qtoolbar.addAction(history_btn)
 
+        # Connect the downloadRequested signal when a new tab is created
+        self.tab_widget.currentChanged.connect(self.connect_download_signal)
+
         # Add a QTimer instance
         self.history_timer = QTimer(self)
         self.history_timer.setSingleShot(True)
@@ -337,6 +340,59 @@ class Browser(QMainWindow):
         url = self.tab_widget.currentWidget().url().toString()
         title = self.tab_widget.currentWidget().page().title()
         self.append_to_history(url, title)
+
+    def download_current_page(self):
+        # Получаем текущий виджет вкладки
+        current_tab_widget = self.tab_widget.currentWidget()
+
+        # Создаем объект загрузки
+        download = current_tab_widget.page().profile().download(current_tab_widget.page().url())
+
+        # Подключаем сигнал завершения загрузки к методу on_download_finished
+        download.finished.connect(self.on_download_finished)
+
+    def download_requested(self, download):
+        # Открываем диалог выбора директории для сохранения файла
+        options = QFileDialog.Options()
+        options |= QFileDialog.DontUseNativeDialog
+
+        # Извлекаем предложенное имя файла из элемента загрузки
+        suggested_file_name = download.suggestedFileName()
+
+        # Устанавливаем директорию по умолчанию в "Downloads"
+        default_directory = QStandardPaths.writableLocation(QStandardPaths.DownloadLocation)
+        file_path, _ = QFileDialog.getSaveFileName(self, "Save File", default_directory + '/' + suggested_file_name, "All Files (*);;Text Files (*.txt)", options=options)
+
+        if file_path:
+            # Устанавливаем местоположение загрузки
+            download.setPath(file_path)
+
+            # Принимаем загрузку
+            download.accept()
+
+            # Подключаем сигнал завершения к пользовательскому слоту
+            download.finished.connect(self.on_download_finished)
+
+    def on_download_finished(self):
+        # Обработка завершения загрузки, например, вывод сообщения
+        print("Download completed.")
+
+    def connect_download_signal(self, index):
+        # Disconnect the previous connection, if any
+        current_widget = self.tab_widget.currentWidget()
+        if current_widget is not None:
+            try:
+                download_signal = current_widget.page().profile().downloadRequested
+                if download_signal.count() > 0:
+                    download_signal.disconnect()
+            except AttributeError:
+                pass
+
+        # Connect the downloadRequested signal to the download_requested method
+        if index != -1:  # Ensure that there is a valid index
+            current_widget = self.tab_widget.widget(index)
+            if isinstance(current_widget, QWebEngineView) and current_widget.page() is not None:
+                current_widget.page().profile().downloadRequested.connect(self.download_requested)
 
 if __name__ == '__main__':
     app = QApplication([])
