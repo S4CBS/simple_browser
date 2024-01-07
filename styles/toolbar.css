@@ -1,0 +1,16 @@
+QToolButton{
+    border: 2px;
+    padding: 1px 4px;
+    background: transparent;
+    border-radius: 4px;
+}
+QTollButton:hover{
+    border: 1px;
+    background: #c3c3c3;
+}
+QToolButton:selected{
+    background: #a8a8a8;
+}
+QToolButton:pressed{
+    background: #888888;
+}

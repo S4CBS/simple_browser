@@ -1,0 +1,43 @@
+/* history_dialog_style.css */
+
+QPushButton {
+    background-color: #3498db;
+    color: #fff;
+    border: 1px solid #3498db;
+    border-radius: 4px;
+    padding: 5px 10px;
+}
+
+QPushButton:hover {
+    background-color: #2980b9;
+    border: 1px solid #2980b9;
+}
+
+QTextBrowser {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+QScrollArea {
+    border: 1px solid #01aeff;
+    border-radius: 4px;
+}
+
+QScrollArea QWidget {
+    background-color: #ffffff;
+}
+
+QScrollArea QScrollBar:vertical {
+    border: 1px solid #ddd;
+    width: 8px;
+    margin: 0px 0px 0px 0px;
+}
+
+QScrollArea QScrollBar:horizontal {
+    border: 1px solid #ddd;
+    height: 8px;
+    margin: 0px 0px 0px 0px;
+}
