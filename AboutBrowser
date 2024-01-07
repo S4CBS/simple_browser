@@ -1,6 +1,6 @@
-# Browser
+# About Browser
 
-Custom Browser is a lightweight and customizable web browser developed using PyQt5 and PyQtWebEngine. It offers a straightforward user interface with essential features for seamless web browsing.
+Simple_Browser is a lightweight and customizable web browser developed using PyQt5 and PyQtWebEngine. It offers a straightforward user interface with essential features for seamless web browsing.
 
 ## Key Features
 
@@ -12,6 +12,12 @@ Custom Browser is a lightweight and customizable web browser developed using PyQ
 
 ## Dependencies
 
-- PyQt5
-- PyQtWebEngine
+- PyQt5 (pip install PyQt5)
+- PyQtWebEngine (pip install PyQtWebEngine)
+
+## Screenshots
+
+![image1](/screenshots/image1.PNG?raw=true "Home page")
+![image2](/screenshots/image2.PNG?raw=true "History")
+![image3](/screenshots/image3.PNG?raw=true "Many tabs")
 
