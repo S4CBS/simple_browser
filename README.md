@@ -17,7 +17,8 @@ Simple_Browser is a lightweight and customizable web browser developed using PyQ
 - PyQt5 (pip install PyQt5)
 - PyQtWebEngine (pip install PyQtWebEngine)
 
-Russian:
+## Russian:
+
 # О браузере
 Simple_Browser - это легкий и настраиваемый веб-браузер, разработанный с использованием PyQt5 и PyQtWebEngine. Он предлагает простой пользовательский интерфейс с основными функциями для комфортного веб-серфинга.
 
