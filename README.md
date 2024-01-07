@@ -14,3 +14,7 @@ Simple_Browser is a lightweight and customizable web browser developed using PyQ
 
 - PyQt5 (pip install PyQt5)
 - PyQtWebEngine (pip install PyQtWebEngine)
+
+## Screenshots
+
+![Alt text](/simple_browser/blob/main/screenshots/image1.PNG?)
