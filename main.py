@@ -352,25 +352,25 @@ class Browser(QMainWindow):
         download.finished.connect(self.on_download_finished)
 
     def download_requested(self, download):
-        # Открываем диалог выбора директории для сохранения файла
-        options = QFileDialog.Options()
-        options |= QFileDialog.DontUseNativeDialog
+        # Open a save file dialog to select the destination path
 
-        # Извлекаем предложенное имя файла из элемента загрузки
+        # Extract suggested file name from the download item
         suggested_file_name = download.suggestedFileName()
 
-        # Устанавливаем директорию по умолчанию в "Downloads"
+        # Set the default directory to "Downloads"
         default_directory = QStandardPaths.writableLocation(QStandardPaths.DownloadLocation)
-        file_path, _ = QFileDialog.getSaveFileName(self, "Save File", default_directory + '/' + suggested_file_name, "All Files (*);;Text Files (*.txt)", options=options)
+        
+        # Use native file dialog
+        file_path, _ = QFileDialog.getSaveFileName(self, "Save File", default_directory + '/' + suggested_file_name, "All Files (*);")
 
         if file_path:
-            # Устанавливаем местоположение загрузки
+            # Set the download location
             download.setPath(file_path)
 
-            # Принимаем загрузку
+            # Accept the download
             download.accept()
 
-            # Подключаем сигнал завершения к пользовательскому слоту
+            # Connect the finished signal to a custom slot
             download.finished.connect(self.on_download_finished)
 
     def on_download_finished(self):
