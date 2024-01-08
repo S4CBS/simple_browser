@@ -40,6 +40,6 @@ Simple_Browser - это легкий и настраиваемый веб-бра
 ![image1](/screenshots/image1.PNG?raw=true "Home page")
 ![image2](/screenshots/image2.PNG?raw=true "History")
 ![image3](/screenshots/image3.PNG?raw=true "Many tabs")
-![image4](/screenshots/image4.PNG?raw=true "Download files")
+![download](/screenshots/dowalod.PNG?raw=true "Download files")
 
 
