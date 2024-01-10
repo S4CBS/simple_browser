@@ -40,7 +40,7 @@ class AboutDialog(QDialog):
 
         # Добавление информации о версии и авторах с ссылкой на GitHub
         lbl1 = QLabel(
-            '<center><a href="https://github.com/S4CBS/simple_browser" style="text-decoration: none; color: #0000FF;">Version 1.5<br>Created by Alexey Panov, Maksim Lobinsev.</a></center>'
+            '<center><a href="https://github.com/S4CBS/simple_browser" style="text-decoration: none; color: #0000FF;">Версия 1.5<br>Проект от Алексей Панова и Максима Лобинцева.</a></center>'
         )
         lbl1.setFont(QFont("Times", 10))
         lbl1.setOpenExternalLinks(True)  # Открывать ссылки во внешнем браузере
@@ -62,7 +62,7 @@ class AboutDialog(QDialog):
         self.resize(400, 250)
         self.setMaximumHeight(300)
         self.setMaximumWidth(500)
-        self.setWindowTitle("About")
+        self.setWindowTitle("О Браузере")
 
         # Установка иконки окна
         self.setWindowIcon(QIcon(os.path.join("_internal", "images", "browser_.png")))
